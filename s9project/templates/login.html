@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <title>LOGIN PAGE</title>
+</head>
+<body>
+<section class="sub-header">
+            <nav>
+                <a href="home.html"><img src="/static/images/logo.jpg"></a>
+            </nav>
+</section>
+    <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toogle-btn" onclick="login()">LogIn</button>
+                    <button type="button" class="toogle-btn" onclick="register()">Register</button>
+                </div>
+                <div class="social-icons">
+                    <img src="/static/images/2.jpeg">
+                    <img src="/static/images/3.jpg">
+                    <img src="/static/images/4.jpg">
+                </div>
+                <form id="login" action="http://127.0.0.1:8000/home/" class="input-group" method="POST">
+                    {% csrf_token %}
+                    <input type="text" class="input-field" placeholder="User name" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>Remember password</span><br>
+                    <a href="http://127.0.0.1:8000/error/" ><h3>ndhdjjskjs</h3></a>
+                    <button type="submit" class="submit-btn" onclick="http://127.0.0.1:8000/home/" value="submit">Log In</button>
+                </form>
+    <style>
+        h3 {
+  color: white;
+  text-decoration: none;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+    </style>
+                <form id="register" class="input-group" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="user_name" class="input-field" placeholder="User name" required>
+                    <input type="password" name="pswd" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn" onclick="login()" value="submit">Register</button>
+                </form>
+            </div>
+
+        </div>
+        <script>
+            var x=document.getElementById("login");
+            var y=document.getElementById("register");
+            var z=document.getElementById("btn");
+
+            function register(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px";
+            }
+            function login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0px";
+            }
+        </script>
+</body>
+</html>

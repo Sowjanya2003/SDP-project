@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <title>REGISTER PAGE</title>
+</head>
+<body>
+<section class="sub-header">
+            <nav>
+                <a href="home.html"><img src="/static/images/logo.jpg"></a>
+            </nav>
+</section>
+    <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toogle-btn" onclick="register()">Register</button>
+                </div>
+                <div class="social-icons">
+                    <img src="/static/images/2.jpeg">
+                    <img src="/static/images/3.jpg">
+                    <img src="/static/images/4.jpg">
+                </div>
+                <form id="register" class="input-group" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="user_name" class="input-field" placeholder="User name" required>
+                    <input type="number" name="mobile_no" class="input-field" placeholder="Mobile Number" required>
+                    <input type="password" name="pswd" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn" onclick="http://127.0.0.1:8000/login/" value="submit">Register</button>
+                </form>
+            </div>
+
+        </div>
+        <script>
+            var x=document.getElementById("login");
+            var y=document.getElementById("register");
+            var z=document.getElementById("btn");
+
+            function register(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px";
+            }
+            function login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0px";
+            }
+        </script>
+</body>
+</html>
