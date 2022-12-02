@@ -26,28 +26,20 @@
                 </div>
                 <form id="login" action="http://127.0.0.1:8000/home/" class="input-group" method="POST">
                     {% csrf_token %}
-                    <input type="text" class="input-field" placeholder="User name" required>
-                    <input type="password" class="input-field" placeholder="Password" required>
-                    <input type="checkbox" class="check-box"><span>Remember password</span><br>
-                    <a href="http://127.0.0.1:8000/error/" ><h3>ndhdjjskjs</h3></a>
+                    <input type="text" class="input-field" placeholder="User name" name="l_username" required>
+                    <input type="password" class="input-field" placeholder="Password" name="l_pswd" required>
+                    <input type="checkbox" class="check-box" name="check1"><span>Remember password</span><br>
                     <button type="submit" class="submit-btn" onclick="http://127.0.0.1:8000/home/" value="submit">Log In</button>
                 </form>
-    <style>
-        h3 {
-  color: white;
-  text-decoration: none;
-}
-a:link {
-  color: white;
-  text-decoration: none;
-}
-    </style>
-                <form id="register" class="input-group" method="POST">
+
+                <form id="register" action="http://127.0.0.1:8000/login/" class="input-group" method="POST">
                     {% csrf_token %}
                     <input type="text" name="user_name" class="input-field" placeholder="User name" required>
+                    <input type="email" name="email_id" class="input-field" placeholder="Email Id" required>
                     <input type="password" name="pswd" class="input-field" placeholder="Password" required>
-                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
-                    <button type="submit" class="submit-btn" onclick="login()" value="submit">Register</button>
+                    <input type="password" name="c_pswd" class="input-field" placeholder="Confirm Password" required>
+                    <input type="checkbox" class="check-box" name="check2"><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn" onclick="http://127.0.0.1:8000/login/" value="submit">Register</button>
                 </form>
             </div>
 

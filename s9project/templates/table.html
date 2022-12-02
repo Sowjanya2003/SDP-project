@@ -17,7 +17,8 @@
                         <li><a href="http://127.0.0.1:8000/menu/">MENU</a></li>
                         <li><a href="http://127.0.0.1:8000/table/">TABLE</a></li>
                         <li><a href="http://127.0.0.1:8000/contact/">CONTACT</a></li>
-                        <li><a href="http://127.0.0.1:8000/mainhome/">LOGOUT</a></li>
+                        <li><a href="http://127.0.0.1:8000/profile/">PROFILE</a></li>
+                        <li><a href="http://127.0.0.1:8000/logout/">LOGOUT</a></li>
                     </ul>
                 </div>
             </nav>
@@ -37,28 +38,28 @@
 
             </div>
             <div class="container-form">
-                <form action="a">
+                <form action="http://127.0.0.1:8000/home/" method="POST">{% csrf_token %}
                     <h2 class="heading heading-yellow">Reservation Online</h2>
 
                     <div class="form-fields">
                         <p>Your Name</p>
-                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="Your Name" name="name">
                     </div>
                     <div class="form-fields">
                         <p>Your E-mail</p>
-                        <input type="email" placeholder="Your E-mail">
+                        <input type="email" placeholder="Your E-mail" name="email">
                     </div>
                     <div class="form-fields">
                         <p>Date</p>
-                        <input type="date">
+                        <input type="date" name="date">
                     </div>
                     <div class="form-fields">
                         <p>Time</p>
-                        <input type="time">
+                        <input type="time" name="time">
                     </div>
                     <div class="form-fields">
                         <p>Branch</p>
-                        <select name="select" id="#">
+                        <select name="branch">
                             <option value="1">select branch</option>
                             <option value="2">Hyderabad</option>
                             <option value="3">Vijayawada</option>
@@ -67,7 +68,7 @@
                     </div>
                     <div class="form-fields">
                         <p>How many people</p>
-                        <select name="select" id="#">
+                        <select id="#" name="people">
                             <option value="1">select persons</option>
                             <option value="1">1 person</option>
                             <option value="2">2 persons</option>
