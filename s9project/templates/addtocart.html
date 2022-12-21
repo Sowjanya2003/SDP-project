@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/css/addtocart.css">
+        <script type="text/javascript" src="/static/js/addtocart.js"></script>
+        <title>Cart</title>
+    </head>
+    <body>
+    <section class="sub-header">
+            <nav>
+                <a href="home.html"><img src="/static/images/logo.jpg"></a>
+                 <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="http://127.0.0.1:8000/home/">HOME</a></li>
+                        <li><a href="http://127.0.0.1:8000/about/">ABOUT</a></li>
+                        <li><a href="http://127.0.0.1:8000/table/">TABLE</a></li>
+                        <li><a href="http://127.0.0.1:8000/contact/">CONTACT</a></li>
+                        <li><a href="http://127.0.0.1:8000/profile/">PROFILE</a></li>
+                        <li><a href="http://127.0.0.1:8000/addtocart/"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="http://127.0.0.1:8000/mainhome/">LOGOUT</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+</section>
+    <h1 align="center" style="color:green">SHOPPING CART</h1>
+        <div class="container">
+            <div class="cart" id="cart">
+        <div class="title">CART</div><hr/>
+        <div id="title"></div>
+                <a href="http://127.0.0.1:8000/addtocart2/"><button type="submit">Calculate Total</button></a>
+
+    </div>
+            <div class="card" id="item1">
+                <img src="/static/images/11.jpg">
+                <div class="title">Dosa  Rs.40</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item1)">Add to Cart</button>
+            </div>
+            <div class="card" id="item2">
+                <img src="/static/images/12.jpg">
+                <div class="title">Puri  Rs.50</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item2)">Add to Cart</button>
+            </div>
+            <div class="card" id="item3">
+                <img src="/static/images/13.jpg">
+                <div class="title">Vada  Rs.60</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item3)">Add to Cart</button>
+            </div><br>
+            <div class="card" id="item4">
+                <img src="/static/images/14.jpg">
+                <div class="title">Biryani  Rs.100</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item4)">Add to Cart</button>
+            </div>
+            <div class="card" id="item5">
+                <img src="/static/images/15.jpg">
+                <div class="title">Southern<br> Thali  Rs.35</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item5)">Add to Cart</button>
+            </div>
+            <div class="card" id="item6">
+                <img src="/static/images/16.jpg">
+                <div class="title">Pulka  Rs.15</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item6)">Add to Cart</button>
+            </div><br>
+            <div class="card" id="item7">
+                <img src="/static/images/17.jpg">
+                <div class="title">Curd Rice  Rs.50</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item7)">Add to Cart</button>
+            </div>
+            <div class="card" id="item8">
+                <img src="/static/images/18.jpg">
+                <div class="title">Salads  Rs.40</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item8)">Add to Cart</button>
+            </div>
+            <div class="card" id="item9">
+                <img src="/static/images/19.jpg">
+                <div class="title">Veg Curry  Rs.60</div>
+                <div>
+                    <label>Quantity:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <button onclick="addtocart(item9)">Add to Cart</button>
+            </div>
+        </div>
+    </body>
+</html>

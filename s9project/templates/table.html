@@ -10,15 +10,16 @@
 <section class="sub-header">
             <nav>
                 <a href="home.html"><img src="/static/images/logo.jpg"></a>
+                <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
                 <div class="nav-links">
                     <ul>
                         <li><a href="http://127.0.0.1:8000/home/">HOME</a></li>
                         <li><a href="http://127.0.0.1:8000/about/">ABOUT</a></li>
-                        <li><a href="http://127.0.0.1:8000/menu/">MENU</a></li>
                         <li><a href="http://127.0.0.1:8000/table/">TABLE</a></li>
                         <li><a href="http://127.0.0.1:8000/contact/">CONTACT</a></li>
                         <li><a href="http://127.0.0.1:8000/profile/">PROFILE</a></li>
-                        <li><a href="http://127.0.0.1:8000/logout/">LOGOUT</a></li>
+                        <li><a href="http://127.0.0.1:8000/addtocart/"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="http://127.0.0.1:8000/mainhome/">LOGOUT</a></li>
                     </ul>
                 </div>
             </nav>
@@ -38,24 +39,25 @@
 
             </div>
             <div class="container-form">
-                <form action="http://127.0.0.1:8000/home/" method="POST">{% csrf_token %}
+                <form action="http://127.0.0.1:8000/gettableres/" method="POST">
+                    {% csrf_token %}
                     <h2 class="heading heading-yellow">Reservation Online</h2>
 
                     <div class="form-fields">
                         <p>Your Name</p>
-                        <input type="text" placeholder="Your Name" name="name">
+                        <input type="text" placeholder="Your Name" name="name" required/>
                     </div>
                     <div class="form-fields">
                         <p>Your E-mail</p>
-                        <input type="email" placeholder="Your E-mail" name="email">
+                        <input type="email" placeholder="Your E-mail" name="email" required/>
                     </div>
                     <div class="form-fields">
                         <p>Date</p>
-                        <input type="date" name="date">
+                        <input type="date" name="sdate" required/>
                     </div>
                     <div class="form-fields">
                         <p>Time</p>
-                        <input type="time" name="time">
+                        <input type="time" name="stime" required/>
                     </div>
                     <div class="form-fields">
                         <p>Branch</p>
